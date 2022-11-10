@@ -12,12 +12,16 @@
 # Requirements
 
 * Requests
+
 pip install requests
 
 * Python 3.10
+
 Tutorial: https://noviello.it/es/como-instalar-python-3-10-en-ubuntu-debian-y-linux-mint/
 
 * Colorama
+
 pip install colorama
+
 
 ( Auto install coming soon )
