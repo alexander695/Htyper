@@ -41,22 +41,22 @@ def menu():
   print(Fore.LIGHTWHITE_EX + "\nSeeing:" + URL)
   print(Fore.LIGHTBLACK_EX + "Do you want to...?")
   print(Fore.LIGHTCYAN_EX + "1.See request cookies           2.See headers          3.See html code")
-  int = input(Fore.LIGHTBLUE_EX + "\n>>")
+  int = input(Fore.LIGHTWHITE_EX + "\n>>")
 
   if int=="1":
-      print(Fore.LIGHTWHITE_EX + Domain.cookies)
+      print(Domain.cookies)
       input("\nPress to back")
       os.system("clear")
       menu()
 
   if int=="2":
-      print(Fore.LIGHTWHITE_EX + Domain.headers)
+      print(Domain.headers)
       input("\nPress to back")
       os.system("clear")
       menu()
     
   if int=="3":
-      print(Fore.LIGHTWHITE_EX + Domain.text)
+      print(Domain.text)
       input("\nPress to back")
       os.system("clear")
       menu()
@@ -73,4 +73,4 @@ else:
     print("Restarting...")
     time.sleep(1)
     os.system("clear")
-    pass  
+    menu()
