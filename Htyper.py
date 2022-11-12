@@ -26,7 +26,7 @@ def menu():
 |_| |_| |_| \__, | .__/ \___|_|
           |___/|_|
   """)
-  print(Fore.LIGHTWHITE_EX + "            V1              ")
+  print(Fore.LIGHTWHITE_EX + "            V1     (beta)         ")
 
 
   if Domain:
@@ -44,19 +44,19 @@ def menu():
   int = input(Fore.LIGHTBLUE_EX + "\n>>")
 
   if int=="1":
-      print(Domain.cookies)
+      print(Fore.LIGHTWHITE_EX + Domain.cookies)
       input("\nPress to back")
       os.system("clear")
       menu()
 
   if int=="2":
-      print(Domain.headers)
+      print(Fore.LIGHTWHITE_EX + Domain.headers)
       input("\nPress to back")
       os.system("clear")
       menu()
     
   if int=="3":
-      print(Domain.text)
+      print(Fore.LIGHTWHITE_EX + Domain.text)
       input("\nPress to back")
       os.system("clear")
       menu()
