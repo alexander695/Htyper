@@ -19,6 +19,8 @@ pip install requests
 
 Tutorial: https://noviello.it/es/como-instalar-python-3-10-en-ubuntu-debian-y-linux-mint/
 
+Windows Installer: https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe
+
 * Colorama
 
 pip install colorama
