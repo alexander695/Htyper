@@ -1,19 +1,8 @@
 ## -*- coding: utf-8 -*-
 import os
-import sys
 import time
 import requests
 from colorama import Fore
-
-print(Fore.LIGHTBLUE_EX + "The url need to contain https:// o http://")
-
-URL  = input(Fore.LIGHTRED_EX + "\nURL:")
-
-
-if (len(URL) <= 13):
-    print("Invalid url")
-    time.sleep(3)
-    os.system("clear")
     
     
 def menu():
@@ -26,8 +15,7 @@ def menu():
 |_| |_| |_| \__, | .__/ \___|_|
           |___/|_|
   """)
-  print(Fore.LIGHTWHITE_EX + "            V1     (beta)         ")
-
+  print(Fore.LIGHTWHITE_EX + "            V1.5    (beta)         ")
 
   if Domain:
        print("Status:")
@@ -41,36 +29,73 @@ def menu():
   print(Fore.LIGHTWHITE_EX + "\nSeeing:" + URL)
   print(Fore.LIGHTBLACK_EX + "Do you want to...?")
   print(Fore.LIGHTCYAN_EX + "1.See request cookies           2.See headers          3.See html code")
+  print(Fore.LIGHTCYAN_EX + "\n4.Osint everything")
   int = input(Fore.LIGHTWHITE_EX + "\n>>")
 
-  if int=="1":
+  if int=="1" or int=="cookies":
       print(Domain.cookies)
       input("\nPress to back")
       os.system("clear")
+      os.system("cls")
       menu()
 
-  if int=="2":
+  if int=="2" or int=="headers":
       print(Domain.headers)
       input("\nPress to back")
       os.system("clear")
+      os.system("cls")
       menu()
     
-  if int=="3":
+  if int=="3" or int=="html code":
       print(Domain.text)
       input("\nPress to back")
       os.system("clear")
+      os.system("cls")
       menu()
-    
-    
-try:
-      menu()
-except Exception as e:
-    print(menu)
-    pass
+  
+  if int=="4" or int=="osint":
+      print(Fore.LIGHTBLUE_EX + "saving source code in source.txt\n")
+      sourcecode = Domain.text
+      f = open("source.txt", "w")
+      f.write(URL + ":\n")
+      f.write(sourcecode)
+      f.close()
+      print(Fore.LIGHTGREEN_EX + "\nCookies injected:")
+      print(Domain.cookies)
+      print(Fore.LIGHTWHITE_EX + "\nHeaders:")
+      print(Domain.headers)
 
-else:
-    print("ERROR")
-    print("Restarting...")
-    time.sleep(1)
-    os.system("clear")
-    menu()
+      input("\nPress enter to back")
+      os.system("clear")
+      os.system("cls")
+      menu()
+  
+  else:
+     print("ERROR")
+     print("Restarting...")
+     time.sleep(1)
+     os.system("clear")
+     os.system("cls")
+     menu()
+
+def seturl():
+  global URL
+  print(Fore.LIGHTBLUE_EX + "The url need to contain https:// or http://")
+  URL  = input(Fore.LIGHTRED_EX + "\nURL:")
+  if (len(URL) <= 13):
+     print("Invalid url")
+     time.sleep(3)
+     os.system("clear")
+     os.system("cls")
+
+  menu()
+
+# Install requirements
+def setup():
+ os.system("pip install requests")
+ os.system("pip install colorama")
+ os.system("clear")
+ os.system("cls")
+ seturl()
+
+setup()
