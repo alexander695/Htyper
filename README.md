@@ -7,7 +7,7 @@
 * See html source code
 * See html headers
 
-<img src="https://media.discordapp.net/attachments/650066826243604493/1040170261242191974/image.png">
+<img src="https://cdn.discordapp.com/attachments/650066826243604493/1097369867948150805/image.png">
 
 # Python 3.10 Required 
 
